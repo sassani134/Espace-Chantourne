@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-slide-up: slide-up 1.2s ease-out forwards;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+.animate-in {
+  animation: var(--animate-fade-in);
+}
+
+.fade-in {
+  animation: var(--animate-fade-in);
+}
+
+.slide-in-from-bottom-8 {
+  animation: var(--animate-slide-up);
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.duration-1000 {
+  animation-duration: 1000ms;
+}
