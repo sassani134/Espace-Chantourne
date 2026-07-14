@@ -73,7 +73,7 @@ export default class extends Controller {
     this.scene.add(accentLight)
 
     // Ajout d'un plan au sol réfléchissant (optionnel)
-    this.addGroundPlane()
+    // this.addGroundPlane()
   }
 
   addGroundPlane() {
@@ -111,8 +111,8 @@ export default class extends Controller {
 
         // Positionner le modèle
         this.model.position.x = 0
-        this.model.position.y = -(center.y - size.y / 2) + 0.3
-        this.model.position.z = 0
+        this.model.position.y = -(center.y - size.y / 2)
+        this.model.position.z = 1
 
         // Appliquer une légère rotation initiale
         this.model.rotation.y = -0.3

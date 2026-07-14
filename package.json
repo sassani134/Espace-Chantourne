@@ -11,9 +11,11 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.23",
+    "@stimulus-components/clipboard": "^5.0.0",
     "@tailwindcss/cli": "^4.2.2",
     "gsap": "^3.14.2",
     "tailwindcss": "^4.2.2",
+    "tailwindcss-stimulus-components": "^6.1.4",
     "three": "^0.183.2"
   }
 }

@@ -4,8 +4,18 @@
 
 import { application } from "./application"
 
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import MobileMenuController from "./mobile_menu_controller"
+application.register("mobile-menu", MobileMenuController)
+
 import ThreejsController from "./threejs_controller"
 application.register("threejs", ThreejsController)
+
+import { Modal } from "tailwindcss-stimulus-components"
+application.register('modal', Modal)
+
+import Clipboard from '@stimulus-components/clipboard'
+application.register('clipboard', Clipboard)

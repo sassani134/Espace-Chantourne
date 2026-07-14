@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  # static pages
+  get "about", to: "static_pages#about"
+  get "contact", to: "static_pages#contact"
+  get "privacy", to: "static_pages#privacy_policy"
+  get "legal", to: "static_pages#legal_information"
+  get "terms", to: "static_pages#terms_and_condition"
+  # get "cookie", to: "static_pages#cookie_policy"
+  get "coming_soon", to: "static_pages#coming_soon"
+
   get "landing/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

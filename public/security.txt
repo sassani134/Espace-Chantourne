@@ -1,0 +1,13 @@
+# Security.txt for espace-chantourne.com
+# This file follows RFC 9116 - https://www.rfc-editor.org/rfc/rfc9116.html
+
+Contact: mailto:espace.chantourne@proton.me
+Contact: https://espace-chantourne.com/contact
+
+
+Preferred-Languages: en
+
+Policy: https://espace-chantourne.com/security-policy
+
+
+Canonical: https://espace-chantourne.com/security.txt

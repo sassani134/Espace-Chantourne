@@ -1,0 +1,27 @@
+# Espace-Chantourne
+
+> Studio indépendant de création de jeux vidéo et de sites web sur mesure, basé à Grenoble, France.
+
+Espace-Chantourne est un studio indépendant fondé en 2026 avec pour objectif de partager une passion pour la création numérique. Nous concevons des jeux vidéo légers et de qualité, ainsi que des sites web personnalisés pour les entreprises.
+
+Le site présente notre univers, nos projets, et nos services. Nous utilisons Ruby on Rails, Three.js, et Tailwind CSS pour construire des expériences digitales uniques.
+
+## Projets
+
+- [Godot Plush 3D](/projets/godot-plush): Un modèle 3D interactif de la mascotte Godot, avec rotation automatique et rendu Three.js.
+- [Espace Chantourne - Accueil](/): Présentation du studio, des jeux vidéo et des services de création de sites web.
+
+## Services
+
+- [Création de sites web sur mesure](/services/web-design): Conception et développement de sites web personnalisés pour les entreprises.
+- [Développement de jeux vidéo](/services/game-dev): Création de jeux vidéo légers, amusants et de haute qualité.
+
+## À propos
+
+- [À propos du studio](/about): L'histoire d'Espace-Chantourne, sa mission et son équipe. [citation:2]
+- [Contact](/contact): Page de contact et liens vers les réseaux sociaux.
+
+## Légal
+
+- [Politique de confidentialité](/privacy): Informations sur la collecte et l'utilisation des données personnelles. [citation:2]
+- [Mentions légales](/legal): Informations légales et juridiques du site.

@@ -1,0 +1,26 @@
+# humanstxt.org
+# Le fichier humans.txt pour Espace-Chantourne
+
+/* TEAM */
+    Fondateur & Développeur Principal: Samuel Assani
+    Email: espace.chantourne@proton.me
+    Localisation: Grenoble, France
+
+/* THANKS */
+    Ruby on Rails: Framework principal
+    Tailwind CSS: Framework UI
+    Stimulus: Interactions JavaScript
+    Three.js: Rendu 3D
+    GSAP: Animations
+
+/* SITE */
+    Dernière mise à jour: 2026/07/13
+    Standards: HTML5, CSS3, JavaScript (ES2024)
+    Framework: Ruby on Rails 8
+    Hébergement: DigitalOcean
+    Langue: Français, Anglais
+
+/* NOTE */
+    Espace-Chantourne est un studio indépendant basé à Grenoble.
+    Nous créons des jeux vidéo légers et des sites web sur mesure.
+    Ce site a été construit avec passion par une seule personne... pour l'instant ! 🏴‍☠️

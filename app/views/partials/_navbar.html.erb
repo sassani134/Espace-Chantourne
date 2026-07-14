@@ -1,47 +1,144 @@
 <%# app/views/layouts/_navbar.html.erb %>
 
-<header class="fixed left-0 right-0 top-0 z-50 mx-4 my-4 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600 shadow-lg dark:from-green-700 dark:to-emerald-700">
-  <div class="mx-auto flex h-20 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-    <!-- Logo -->
-    <%= link_to root_path, class: "block flex-shrink-0" do %>
-      <%= image_tag "EcTextLogoNoBg.png", alt: "Espace Chantourne Logo", class: "h-32 w-auto transition hover:opacity-80 md:h-32" %>
-    <% end %>
+<!-- ===== CONTENEUR PARENT AVEC LE CONTROLEUR ===== -->
+<div data-controller="mobile-menu">
+  
+  <!-- ===== LE HEADER ===== -->
+  <header class="fixed left-0 right-0 top-0 z-50 mx-4 my-4 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600 shadow-lg dark:from-green-700 dark:to-emerald-700">
+    <div class="mx-auto flex h-20 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+      <!-- Logo -->
+      <%= link_to root_path, class: "block flex-shrink-0" do %>
+        <%= image_tag "EcTextLogoNoBg.png", alt: "Espace Chantourne Logo", class: "h-32 w-auto transition hover:opacity-80 md:h-32" %>
+      <% end %>
 
-    <!-- Navigation -->
-    <div class="flex flex-1 items-center justify-end md:justify-between">
-      <nav aria-label="Global" class="hidden md:block">
-        <ul class="flex items-center gap-6 text-sm font-medium">
-          <li><%= link_to "About", "#", class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
-          <li><%= link_to "Careers", "#", class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
-          <li><%= link_to "History", "#", class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
-          <li><%= link_to "Services", "#", class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
-          <li><%= link_to "Projects", "#", class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
-          <li><%= link_to "Blog", "#", class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
-        </ul>
-      </nav>
+      <!-- Navigation -->
+      <div class="flex flex-1 items-center justify-end md:justify-between">
+        <nav aria-label="Global" class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><%= link_to "Projects", root_path(anchor: "project"), class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
+            <li><%= link_to "About Us", about_path, class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
+            <li><%= link_to "Contact", contact_path, class: "text-white/90 transition hover:text-white dark:text-green-200 dark:hover:text-white" %></li>
+          </ul>
+        </nav>
 
-      <!-- Actions -->
-      <div class="flex items-center gap-4">
-
-        <!-- Mobile Menu Button -->
-        <button
-          class="block rounded-md bg-white/20 p-2.5 text-white transition hover:bg-white/30 md:hidden dark:bg-green-800/40 dark:hover:bg-green-800/60"
-          data-controller="mobile-menu"
-          data-action="click->mobile-menu#toggle"
-        >
-          <span class="sr-only">Toggle menu</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
+        <div class="flex items-center gap-4">
+          <!-- Mobile Menu Button -->
+          <button
+            data-action="click->mobile-menu#toggle"
+            class="block rounded-md bg-white/20 p-2.5 text-white transition hover:bg-white/30 md:hidden dark:bg-green-800/40 dark:hover:bg-green-800/60 z-50 relative"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+            <span class="sr-only">Toggle menu</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
+  </header>
+
+  <!-- ===== LE MENU OVERLAY (maintenant à l'intérieur du conteneur) ===== -->
+  <div 
+    data-mobile-menu-target="menu"
+    class="fixed inset-0 z-40 flex flex-col items-center justify-center bg-gradient-to-b from-neutral-900 to-black transform transition-all duration-500 ease-in-out translate-x-full opacity-0 hidden md:hidden"
+  >
+    <!-- Bouton de fermeture -->
+    <button 
+      data-action="click->mobile-menu#close"
+      class="absolute top-6 right-6 p-2.5 text-white/60 hover:text-white transition-colors z-50"
+    >
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Liens -->
+    <nav class="flex flex-col items-center gap-10 md:gap-12 w-full max-w-md px-6">
+      <div class="mb-4">
+        <%= image_tag "EcTextLogoNoBg.png", alt: "Home", class: "h-24 w-auto opacity-80" %>
+      </div>
+
+      <div class="w-full flex flex-col items-center gap-8 md:gap-10">
+        <%= link_to "Projects", coming_soon_path, 
+            class: "menu-link text-white text-3xl md:text-5xl font-bold tracking-tighter transition-all duration-500 ease-out opacity-0 translate-y-8 hover:text-green-400 hover:scale-110",
+            data: { action: "click->mobile-menu#closeOnLinkClick" } %>
+            
+        <%= link_to "About us", about_path,
+            class: "menu-link text-white text-3xl md:text-5xl font-bold tracking-tighter transition-all duration-500 ease-out opacity-0 translate-y-8 hover:text-green-400 hover:scale-110",
+            data: { action: "click->mobile-menu#closeOnLinkClick" } %>
+            
+        <%= link_to "Contact", contact_path,
+            class: "menu-link text-white text-3xl md:text-5xl font-bold tracking-tighter transition-all duration-500 ease-out opacity-0 translate-y-8 hover:text-green-400 hover:scale-110",
+            data: { action: "click->mobile-menu#closeOnLinkClick" } %>
+            
+      </div>
+
+      <!-- Liens sociaux -->
+      <div class="mt-8 pt-8 border-t border-white/10 w-full flex justify-center gap-8">
+
+      <!-- X (formerly Twitter) -->
+      <%= link_to "https://x.com/EspaceChantourn/",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          data: { action: "click->mobile-menu#closeOnLinkClick" },
+          class: "text-neutral-500 hover:text-white transition-colors" do %>
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.8048 2.96973H20.8705L14.1394 10.6338L22.0034 21.0304H15.8321L11.0004 14.7125L5.46893 21.0304H2.40328L9.53424 12.8331L2.00342 2.96973H8.32798L12.6932 8.74114L17.8048 2.96973ZM16.7318 19.231H18.4313L7.43494 4.70248H5.60888L16.7318 19.231Z"/>
+              </svg>
+      <%end%>
+
+      <!-- Instagram -->
+      <%= link_to "https://www.instagram.com/espace.chantourne/",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          data: { action: "click->mobile-menu#closeOnLinkClick" },
+          class: "text-neutral-500 hover:text-white transition-colors" do %>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+      <%end%>
+
+      <!-- Tiktok -->
+      <%= link_to coming_soon_path,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          class: "text-neutral-500 hover:text-white transition-colors",
+          data: { action: "click->mobile-menu#closeOnLinkClick" }  do %>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5 2.592 2.592 0 0 1-2.59-2.5 2.592 2.592 0 0 1 2.59-2.5c.26 0 .5.04.74.12v-3.1a5.66 5.66 0 0 0-.74-.07 5.74 5.74 0 0 0-5.65 5.65 5.74 5.74 0 0 0 5.65 5.65 5.74 5.74 0 0 0 5.65-5.65V7.36c1.06.76 2.3 1.18 3.61 1.18v-3.1a4.107 4.107 0 0 1-1.83-.92c.01-.01-.01-.01 0 0a4.15 4.15 0 0 1-1.08-1.7z"/>
+          </svg>
+        <%end%>
+        
+        <!-- Github -->
+        <%= link_to "https://github.com/sassani134",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            data: { action: "click->mobile-menu#closeOnLinkClick" },
+            class: "text-neutral-500 hover:text-white transition-colors" do %>
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+        <%end%>
+
+        <!-- Youtube -->
+        <%= link_to "https://www.youtube.com/@EspaceChantourne",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            class: "text-neutral-500 hover:text-white transition-colors",
+            data: { action: "click->mobile-menu#closeOnLinkClick" }  do %>
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+        <%end%>
+
+      </div>
+    </nav>
   </div>
-</header>
+</div>

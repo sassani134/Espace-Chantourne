@@ -20,11 +20,11 @@
 
     <div class="relative z-10 text-center px-6">
       <h1 class="text-6xl md:text-9xl font-black uppercase tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-        Espace <span class="text-neutral-500">Chantourne</span>
+        Espace <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">Chantourne</span>
       </h1>
       <div class="h-1 w-24 bg-white mx-auto mb-6"></div>
       <p class="text-lg md:text-2xl font-light tracking-[0.4em] text-neutral-300 uppercase animate-in fade-in duration-1000 delay-500">
-        Digital Exploration
+        Games - Web
       </p>
     </div>
 
@@ -37,9 +37,9 @@
 
 
 <!-- Three.js Section -->
-<section class="relative h-[100svh] w-full bg-gradient-to-b from-neutral-900 to-black overflow-hidden" 
+<section class="relative h-[100svh] w-full bg-black overflow-hidden" 
          data-controller="threejs" 
-         data-threejs-model-path-value="<%= "/model3D/godot_plush/godot_plush_model.glb" %>">
+         data-threejs-model-path-value="<%= "model3D/sophia.glb" %>">
     
     <!-- ThreeJS Canvas Container - Réduit pour laisser plus de place au texte -->
     <div data-threejs-target="canvas" class="absolute right-0 top-0 w-[55%] h-full z-0">
@@ -52,91 +52,42 @@
     <!-- Contenu textuel à gauche - PREND PLUS DE PLACE -->
     <div class="relative z-10 h-full flex items-center px-8 md:px-16 lg:px-24 w-full md:w-[60%]">
       <div class="space-y-8 md:space-y-10 max-w-3xl">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-          </span>
-          <span class="text-xs font-mono tracking-[0.2em] text-neutral-400 uppercase">3D Interactive Experience</span>
-        </div>
+
 
         <!-- Titre principal - PLUS GRAND -->
         <h1 class="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85]">
-          Godot
+          Games &
           <br />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-green-500">
-            Plush
+            Web
           </span>
         </h1>
 
         <!-- Sous-titre - PLUS LARGE -->
         <p class="text-xl md:text-2xl lg:text-3xl text-neutral-400 max-w-2xl leading-relaxed font-light">
-          Experience the beloved Godot Engine mascot in full 3D. 
-          A continuous 360° rotation showcasing every detail of this 
-          iconic plush character.
+          Crafting games with heart. 
+          <br>
+          Building websites with soul.
+          <br>
+          Just want to make cool stuff to share with others
         </p>
 
         <!-- Séparateur décoratif -->
         <div class="w-24 h-0.5 bg-gradient-to-r from-green-500 to-emerald-500"></div>
 
-        <!-- Informations techniques - PLUS ESPACÉES -->
-        <div class="flex flex-wrap gap-12 text-sm">
-          <div>
-            <span class="block text-neutral-600 font-mono text-[11px] uppercase tracking-wider">Model</span>
-            <span class="text-white text-lg font-medium">Godot Plush v1.0</span>
-          </div>
-          <div>
-            <span class="block text-neutral-600 font-mono text-[11px] uppercase tracking-wider">Format</span>
-            <span class="text-white text-lg font-medium">GLB / Three.js</span>
-          </div>
-          <div>
-            <span class="block text-neutral-600 font-mono text-[11px] uppercase tracking-wider">Rotation</span>
-            <span class="text-white text-lg font-medium">360° Auto</span>
-          </div>
-        </div>
 
-        <!-- Call to action - PLUS GRANDS BOUTONS -->
-        <div class="flex flex-wrap gap-4 pt-6">
-          <a href="#" class="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-white font-medium text-lg transition-all hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30">
-            <span>Explore Model</span>
-            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-          <button class="px-10 py-5 border border-white/15 rounded-full text-neutral-400 font-medium text-lg hover:bg-white/5 transition-colors">
-            View Details
-          </button>
-        </div>
 
-        <!-- Statistiques ou informations supplémentaires -->
-        <div class="flex gap-12 pt-4 border-t border-white/5">
-          <div>
-            <span class="text-2xl font-black text-white">24k</span>
-            <span class="block text-xs text-neutral-500 font-mono tracking-wider">Triangles</span>
-          </div>
-          <div>
-            <span class="text-2xl font-black text-white">4K</span>
-            <span class="block text-xs text-neutral-500 font-mono tracking-wider">Texture</span>
-          </div>
-          <div>
-            <span class="text-2xl font-black text-white">60</span>
-            <span class="block text-xs text-neutral-500 font-mono tracking-wider">FPS</span>
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- Indicateur de scroll -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none">
-      <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-600 font-mono">Scroll</span>
-      <div class="w-[1px] h-10 bg-gradient-to-b from-neutral-600 to-transparent"></div>
-    </div>
+
   </section>
 
 
+
+
 <!-- Projects Section -->
-<section class="relative w-full bg-gradient-to-b from-neutral-900 to-black py-24 md:py-32 overflow-hidden">
+<section class="relative w-full bg-black py-24 md:py-32 overflow-hidden">
   <!-- Background decoration -->
   <div class="absolute inset-0 opacity-5">
     <div class="absolute top-0 left-0 w-96 h-96 bg-green-500 rounded-full blur-3xl"></div>
@@ -146,13 +97,7 @@
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
     <!-- Header -->
     <div class="text-center mb-16">
-      <div class="inline-flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5 mb-6">
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-        </span>
-        <span class="text-xs font-mono tracking-[0.2em] text-neutral-400 uppercase">Featured Work</span>
-      </div>
+
 
       <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">
         Our
@@ -169,12 +114,8 @@
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
       <!-- Card 1 - Left (Smaller) -->
-      <a href="#" class="group relative block bg-black rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-1">
-        <img
-          alt="Project 1"
-          src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?auto=format&fit=crop&q=80&w=1160"
-          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
-        />
+      <a href="https://github.com/sassani134/pokemmoDex01" class="group relative block bg-black rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-1">
+        <%= image_tag "Pokedex_Pokemmo.webp", alt: "Espace Chantourne Logo", class: "absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" %>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
         <div class="relative p-6 md:p-8 h-[400px] md:h-[450px] flex flex-col justify-end">
@@ -193,8 +134,8 @@
       </a>
 
       <!-- Card 2 - Center (LARGER) -->
-      <a href="#" class="group relative block bg-black rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-1 md:scale-105 md:z-10">
-        <%= image_tag "tosbTitle01.png", alt: "Espace Chantourne Logo", class: "absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" %>
+      <a href="https://github.com/sassani134/TheOpenSourceBrigade" class="group relative block bg-black rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-1 md:scale-105 md:z-10">
+        <%= image_tag "tosb.webp", alt: "Espace Chantourne Logo", class: "absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" %>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
         <!-- Featured badge -->
@@ -205,20 +146,12 @@
         </div>
 
         <div class="relative p-6 md:p-10 h-[450px] md:h-[550px] flex flex-col justify-end">
-          <div class="mb-2">
-            <span class="text-xs font-mono tracking-widest text-green-400 uppercase bg-black/50 px-3 py-1 rounded-full">Full Stack</span>
-          </div>
-          <h3 class="text-3xl md:text-4xl font-bold text-white mb-2">Espace Platform</h3>
+          <h3 class="text-3xl md:text-4xl font-bold text-white mb-2">The Open Source Brigade</h3>
           <p class="text-sm md:text-base text-neutral-300 line-clamp-3 max-w-md">
-            A comprehensive digital ecosystem combining 3D experiences, community features, and real-time collaboration tools.
+            The Open Source Brigade is a 3d platformer game made with Godot.
           </p>
 
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-[10px] font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded">Rails 8</span>
-            <span class="text-[10px] font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded">Three.js</span>
-            <span class="text-[10px] font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded">Tailwind</span>
-            <span class="text-[10px] font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded">Stimulus</span>
-          </div>
+
 
           <div class="mt-6 translate-y-4 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
             <div class="flex items-center gap-3 text-sm text-green-400 font-medium">
@@ -232,20 +165,14 @@
       </a>
 
       <!-- Card 3 - Right (Smaller) -->
-      <a href="#" class="group relative block bg-black rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-1">
-        <img
-          alt="Project 3"
-          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1170"
-          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
-        />
+      <a href="https://github.com/sassani134/KayKit-Platformer-Pack-Godot-Ready" class="group relative block bg-black rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-1">
+        <%= image_tag "GodotReadyTampon.webp", alt: "Espace Chantourne Logo", class: "absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" %>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
         <div class="relative p-6 md:p-8 h-[400px] md:h-[450px] flex flex-col justify-end">
-          <div class="mb-2">
-            <span class="text-xs font-mono tracking-widest text-green-400 uppercase bg-black/50 px-3 py-1 rounded-full">Mobile</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Project Gamma</h3>
-          <p class="text-sm text-neutral-300 line-clamp-2">Cross-platform mobile application built with React Native.</p>
+
+          <h3 class="text-2xl font-bold text-white mb-2">Godot Ready series</h3>
+          <p class="text-sm text-neutral-300 line-clamp-2">a series of simple plugins with 3d assets</p>
 
           <div class="mt-6 translate-y-4 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
             <div class="flex items-center gap-3 text-sm text-green-400">
@@ -260,129 +187,25 @@
     </div>
 
     <!-- CTA Button -->
+    <!-- coming soon -->
     <div class="text-center mt-16">
-      <a href="#" class="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-white font-medium text-lg transition-all hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30">
-        <span>View All Projects</span>
-        <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
+    <%= link_to coming_soon_path, class: "group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-white font-medium text-lg transition-all hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30" do %>
+      <span>View All Projects</span>
+      <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+      </svg>
+    <% end %>
       <p class="text-neutral-500 text-sm mt-4">Explore our complete portfolio of innovative solutions</p>
     </div>
   </div>
 </section>
 
-  <!-- Donation Section -->
-<section class="relative w-full bg-gradient-to-b from-black to-neutral-900 py-24 md:py-32 overflow-hidden">
-  <!-- Background decoration -->
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-green-500 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
-  </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-6 md:px-8">
-    <!-- Header -->
-    <div class="text-center mb-16">
+<%= render partial: 'partials/donations' %>
 
-      <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-        Make a
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
-          Donation
-        </span>
-      </h2>
-      
-      <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-        Donations help me cover infrastructure costs and supplement my 9-to-5 job.
-        Every contribution, no matter the size, is deeply appreciated.
-      </p>
-    </div>
 
-    <!-- Donation Methods Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <!-- PayPal USD -->
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
-        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#0070BA] to-[#003087] flex items-center justify-center text-white text-2xl font-bold transition-transform group-hover:scale-110">
-          $
-        </div>
-        <span class="text-sm font-medium text-white">PayPal</span>
-        <span class="text-xs text-neutral-500">USD</span>
-      </a>
 
-      <!-- PayPal EUR -->
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
-        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#0070BA] to-[#003087] flex items-center justify-center text-white text-2xl font-bold transition-transform group-hover:scale-110">
-          €
-        </div>
-        <span class="text-sm font-medium text-white">PayPal</span>
-        <span class="text-xs text-neutral-500">EUR</span>
-      </a>
-
-      <!-- Ko-fi -->
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
-        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#FF5E5B] to-[#FF8A80] flex items-center justify-center text-white text-2xl font-bold transition-transform group-hover:scale-110">
-          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-            <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-          </svg>
-        </div>
-        <span class="text-sm font-medium text-white">Ko-fi</span>
-        <span class="text-xs text-neutral-500">USD</span>
-      </a>
-
-      <!-- Bitcoin -->
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
-        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#F7931A] to-[#FFB347] flex items-center justify-center text-white text-2xl font-bold transition-transform group-hover:scale-110">
-          ₿
-        </div>
-        <span class="text-sm font-medium text-white">Bitcoin</span>
-        <span class="text-xs text-neutral-500">BTC</span>
-      </a>
-
-      <!-- Ethereum -->
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
-        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#627EEA] to-[#8B9FFF] flex items-center justify-center text-white text-2xl font-bold transition-transform group-hover:scale-110">
-          ⟠
-        </div>
-        <span class="text-sm font-medium text-white">Ethereum</span>
-        <span class="text-xs text-neutral-500">ETH</span>
-      </a>
-
-      <!-- USDT -->
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
-        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#26A17B] to-[#50C878] flex items-center justify-center text-white text-2xl font-bold transition-transform group-hover:scale-110">
-          ₮
-        </div>
-        <span class="text-sm font-medium text-white">USDT</span>
-        <span class="text-xs text-neutral-500">TRC20</span>
-      </a>
-
-      <!-- Dogecoin -->
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
-        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#C2A633] to-[#F2D94A] flex items-center justify-center text-white text-2xl font-bold transition-transform group-hover:scale-110">
-          Ð
-        </div>
-        <span class="text-sm font-medium text-white">Dogecoin</span>
-        <span class="text-xs text-neutral-500">DOGE</span>
-      </a>
-
-      <!-- Custom Amount / Other -->
-      <a href="#" class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 backdrop-blur-sm border border-dashed border-white/20 rounded-2xl transition-all hover:bg-white/10 hover:border-green-500/50 hover:scale-105">
-        <div class="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center text-neutral-400 text-3xl transition-transform group-hover:scale-110">
-          +
-        </div>
-        <span class="text-sm font-medium text-white">Other</span>
-        <span class="text-xs text-neutral-500">Custom</span>
-      </a>
-    </div>
-
-    <!-- Footer message -->
+    <!-- Footer message 
     <div class="text-center mt-16">
       <div class="inline-flex items-center gap-3 text-sm text-neutral-500">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -395,6 +218,7 @@
       </p>
     </div>
   </div>
+  -->
 </section>
   
-  </div>
+</div>

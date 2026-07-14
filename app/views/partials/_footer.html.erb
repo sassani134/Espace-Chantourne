@@ -1,11 +1,76 @@
-  <footer class="py-20 px-8 bg-black text-center border-t border-neutral-900">
-    <div class="mb-8">
-       <span class="text-2xl font-black tracking-tighter italic">ESPACE-CHANTOURNE</span>
+<footer class="bg-gradient-to-b from-neutral-900 to-black border-t border-white/5">
+  <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+    
+    <!-- Logo + Description + Social -->
+    <div class="flex flex-col items-center lg:flex-row lg:justify-between">
+      <div class="text-center lg:text-left">
+        <%= link_to root_path do %>
+          <%= image_tag "EcTextLogoNoBg.png", alt: "Espace Chantourne", class: "h-20 w-auto opacity-80 transition hover:opacity-100 md:h-24 mx-auto lg:mx-0" %>
+        <% end %>
+        <p class="mt-4 max-w-md text-center leading-relaxed text-neutral-400 lg:text-left">
+          Create cool stuff for others with ♥
+        </p>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="mt-8 flex items-center gap-4 lg:mt-0">
+
+        <!-- X (formerly Twitter) -->
+        <%= link_to "https://x.com/EspaceChantourn/",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            class: "rounded-full bg-white/5 p-2.5 text-neutral-400 transition hover:bg-white/10 hover:text-green-400" do %>
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.8048 2.96973H20.8705L14.1394 10.6338L22.0034 21.0304H15.8321L11.0004 14.7125L5.46893 21.0304H2.40328L9.53424 12.8331L2.00342 2.96973H8.32798L12.6932 8.74114L17.8048 2.96973ZM16.7318 19.231H18.4313L7.43494 4.70248H5.60888L16.7318 19.231Z"/>
+                </svg>
+        <%end%>
+        
+        <!-- TikTok -->
+        <%= link_to "https://www.tiktok.com/@espace.chantourne",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            class: "rounded-full bg-white/5 p-2.5 text-neutral-400 transition hover:bg-white/10 hover:text-green-400" do %>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5 2.592 2.592 0 0 1-2.59-2.5 2.592 2.592 0 0 1 2.59-2.5c.26 0 .5.04.74.12v-3.1a5.66 5.66 0 0 0-.74-.07 5.74 5.74 0 0 0-5.65 5.65 5.74 5.74 0 0 0 5.65 5.65 5.74 5.74 0 0 0 5.65-5.65V7.36c1.06.76 2.3 1.18 3.61 1.18v-3.1a4.107 4.107 0 0 1-1.83-.92c.01-.01-.01-.01 0 0a4.15 4.15 0 0 1-1.08-1.7z"/>
+          </svg>
+        <%end%>
+
+        <!-- Github -->
+        <%= link_to "https://github.com/sassani134",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            class: "rounded-full bg-white/5 p-2.5 text-neutral-400 transition hover:bg-white/10 hover:text-green-400" do %>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        <%end%>
+        
+        <!-- Youtube -->
+        <%= link_to "https://www.youtube.com/@EspaceChantourne",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            class: "rounded-full bg-white/5 p-2.5 text-neutral-400 transition hover:bg-white/10 hover:text-green-400" do %>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        <%end%>
+      </div>
     </div>
-    <div class="flex justify-center gap-8 mb-12 text-[10px] uppercase tracking-widest font-bold text-neutral-600">
-      <a href="#" class="hover:text-white transition-colors">Instagram</a>
-      <a href="#" class="hover:text-white transition-colors">Twitter</a>
-      <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+
+    <!-- Séparateur -->
+    <div class="my-8 h-px bg-gradient-to-r from-transparent via-green-500/20 to-transparent"></div>
+
+    <!-- Footer bottom -->
+    <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <p class="text-center text-sm text-neutral-500">
+        &copy; <%= Date.current.year %> Espace Chantourne. All rights reserved.
+      </p>
+      
+      <div class="flex items-center gap-4 text-xs">
+        <%= link_to "Privacy policy", privacy_path, class: "text-neutral-500 hover:text-neutral-400 transition" %>
+        <span class="text-neutral-700">|</span>
+        <%= link_to "Legal information", legal_path, class: "text-neutral-500 hover:text-neutral-400 transition" %>
+      </div>
     </div>
-    <p class="text-neutral-700 text-[10px] uppercase tracking-[0.3em]">&copy; 2026 Digital Design Bureau. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>

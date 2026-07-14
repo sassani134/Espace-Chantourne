@@ -5,12 +5,25 @@
   --animate-slide-up: slide-up 1.2s ease-out forwards;
 
   @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
+
   @keyframes slide-up {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -32,4 +45,40 @@
 
 .duration-1000 {
   animation-duration: 1000ms;
+}
+
+/* app/assets/stylesheets/mobile_menu.css */
+
+[data-mobile-menu-target="menu"] {
+  overflow-y: auto;
+}
+
+.menu-link {
+  transform-origin: center;
+  position: relative;
+}
+
+/* Effet de soulignement au survol */
+.menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #22c55e, #10b981);
+  transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+/* Animation d'arrière-plan pour un effet plus dynamique */
+.menu-bg-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.1;
 }

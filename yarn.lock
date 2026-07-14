@@ -7,7 +7,7 @@
   resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.28.0.tgz"
   integrity sha512-us0dSb9iFxIi8srnpl931Nvs65it/Jd2a2K3qs7fz2WfGPHqzfzZTfec7oxZJRNPXPnNYZtanmRc4AL/JwVzHQ==
 
-"@hotwired/stimulus@^3.2.2":
+"@hotwired/stimulus@^3.0.0", "@hotwired/stimulus@^3.2.2", "@hotwired/stimulus@>= 3.0.0":
   version "3.2.2"
   resolved "https://registry.npmjs.org/@hotwired/stimulus/-/stimulus-3.2.2.tgz"
   integrity sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A==
@@ -97,6 +97,11 @@
   version "8.1.300"
   resolved "https://registry.npmjs.org/@rails/actioncable/-/actioncable-8.1.300.tgz"
   integrity sha512-zOENQsq3NM2jyBY6Z2qtZa3V/R/6OEqA+LGKixQbBMl7kk/J3FXDRcszPe74LsHNgB01jCl/DXu/xA8sHt4I/g==
+
+"@stimulus-components/clipboard@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/@stimulus-components/clipboard/-/clipboard-5.0.0.tgz"
+  integrity sha512-gbwU1sVBiKfMGGCt6oyXx9mGD+cEcHBSqaz//5UVepoQqzl2jYEUWQGFIO0f48LMOamEQwR1azQKfHq6llv6oA==
 
 "@tailwindcss/cli@^4.2.2":
   version "4.2.2"
@@ -284,6 +289,11 @@ source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz"
   integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
+
+tailwindcss-stimulus-components@^6.1.4:
+  version "6.1.4"
+  resolved "https://registry.npmjs.org/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-6.1.4.tgz"
+  integrity sha512-9RtK3Str7b9RPCVI+Wpmq2nN0Kmuiqui8tNjpdC3dJiNOHDlqPe4bEdiHWIr9dVsysYSgp9/nHemLGbR6kefjg==
 
 tailwindcss@^4.2.2, tailwindcss@4.2.2:
   version "4.2.2"
